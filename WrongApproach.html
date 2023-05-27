@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{                              /*css reset코드 일관성있게 맞춘다.*/
+        margin: 0;padding: 0;
+    }
+    @media (max-width: 800px) {
+    /* 화면 크기가 768px 이하일 때 적용되는 스타일 */
+        h2{display: none;}
+        body{width: 100%; height: 100%;}
+    }
+    body{
+        background-image: url('usepicture/mainBackgroundimg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #modal{
+        width: 100%; height: 100vh;
+        /* top: 0; bottom: 0; left: 0;right: 0; */
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    dd{
+        position: relative;
+    }
+    img{
+        width: 70%; height: 80%;
+        margin-left: 15%;
+        border-radius: 20px;
+        position: absolute;
+    }
+    button{
+        position: absolute;
+        margin-left: 72%;
+        margin-top: 15%;
+        width: 8%; height: 25%;
+        background-image: url('usepicture/movelogin.gif');
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    h2{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: red;
+        text-align: center;
+        font-size: 50px;
+    }
+    button div{
+        font-size: large;
+        font-weight: bold;
+        background-color: rgb(211, 211, 211);
+        width: 100%;
+        padding-top: 5px;padding-bottom: 5px; 
+        border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;
+    }
+    button div:hover{
+        background-color: rgb(211, 211, 211,0.9);
+        cursor: pointer;
+    }
+    button:hover{
+        border: dotted yellow 3px;
+    }
+</style>
+<body>
+   <div id="modal">
+        <h2>Warning! Warning! Warning!</h2>
+        <div id="dd">
+            <img src="usepicture/wrongApproache.jpg">
+            <div>
+                <button><div>Move to login</div></button>
+            </div>
+        </div>
+   </div> 
+    
+    <script>
+        alert('잘못된 경로로 접근하였습니다.');
+        const button = document.querySelector('button');
+        button.addEventListener('click',movepage);
+        function movepage(){
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

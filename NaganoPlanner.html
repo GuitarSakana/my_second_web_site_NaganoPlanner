@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naganomai Planner</title>
+    <link rel="stylesheet" href="NagonoPlanner.css">
+    <link rel="stylesheet" href="StyleSheet/calendarStyle.css">
+    <link rel="stylesheet" href="StyleSheet/calendarStyle2.css">
+    <link rel="stylesheet" href="GuitarfishPlayer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <h1 id="Title"><a href="NaganoPlanner.html" id="title">My &nbsp Naganomai &nbsp Planner</a></h1>
+
+    <div id ="container">
+        <div id = "todobox" class = "grid_item gridbox">    <!--해야할일 전체 박스-->
+            <div id="todotitle">TodoList</div>
+            <form id="todo-form" class = "">           <!-- 해야할일 입력 창-->
+                <center><input id="todoinput" type="text" placeholder="Write todo list." required autocomplete="off" maxlength="22">
+                <button id="todobutton">Add</button></center>
+            </form>
+            <div id="todo-list"></div>        <!-- 해야할 일 리스트 -->
+            <div id = "todoboximg"></div>       <!-- 해야할일 배경박스-->
+        </div>
+
+
+        <div id = "centerbox"class = "grid_item">
+            <!-- user greeting 인사 -->
+            <div id = "hiuserbox" class="gridbox">
+                <h3 id="timegreeting"></h3><h3 id="usersex"></h3><h3 id="username"></h3>
+                <div id="userboximg"></div>
+            </div>
+            <!--MusicPlayer main-->
+            <div class="wrapper">
+                <div class="top-bar">
+                  <i class="material-icons">expand_more</i>
+                  <span>Now Playing</span>
+                  <i class="material-icons">more_horiz</i>
+                </div>
+                <div class="img-area">
+                  <div id="imgbox"><img src="" alt=""></div>
+                  <div id="mpbox">
+                      <div id="wave" class="">
+                        <span class="stroke">|</span>
+                        <span class="stroke">|</span>
+                        <span class="stroke">|</span>
+                        <span class="stroke">|</span>
+                        <span class="stroke">|</span>
+                        <span class="stroke">|</span>
+                        <span class="stroke">|</span>
+                      </div>       
+                      <div class="song-details">
+                        <p class="name"></p>
+                        <p class="artist"></p>
+                      </div>
+                  </div>
+                </div>
+                <div class="progress-area">
+                  <div class="progress-bar">
+                    <audio id="main-audio" src=""></audio>
+                  </div>
+                  <div class="song-timer">
+                    <span class="current-time">0:00</span>
+                    <span class="max-duration">0:00</span>
+                  </div>
+                </div>
+                <div class="controls">
+                  <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+                  <i id="prev" class="material-icons">skip_previous</i>
+                  <div class="play-pause">
+                    <i class="material-icons play">play_arrow</i>
+                  </div>
+                  <i id="next" class="material-icons">skip_next</i>
+                  <i id="more-music" class="material-icons">queue_music</i>
+                </div>
+              </div>
+            <!-- MusciPlayer -->
+            <div id = "mainbox" class ="gridbox">
+                <div id="mp3player">
+                    <div id="beforelist">
+                        <div class="music-list">
+                        <div class="header">
+                            <div class="row">
+                            <i class= "list material-icons">queue_music</i>
+                            <span>Music list</span>
+                            </div>
+                        </div>
+                        <div id="bordcolor">
+                        <ul>
+                            <!-- here li list are coming from js -->
+                        </ul>
+                        </div>
+                        </div>
+                    </div>
+                    <div id="lyrics"></div>
+                </div>               
+            </div>
+        </div>
+
+
+        <div id = "rightebox" class = "grid_item">
+            <!--날짜-->
+            <div id = "timebox" class="gridbox">
+                <span id ="DD">
+                    <h4 id="date">0000.00.00</h4>         <!--년,월,일-->
+                    <h4 id="day">week</h4>                <!--요일-->
+                </span>         
+                <h1 id="clock">00:00:00</h1>            <!--현재 시간-->
+                <div id="timeboximg"></div>         <!--timebox 배경-->
+            </div>
+
+            <!--날씨-->
+            <div id ="placebox" class="gridbox">
+                <h3 id = 'getloading' class="" style="text-align: center; margin-top: 23px;">Getting location information....</h3>  <!--로딩화면-->
+                <div id="weather" class = ''>     <!-- 날씨 정보-->
+                    <span id="w1" class="weatheritem"><div id="country"></div><div id="city"></div></span>       <!-- 나라, 도시-->
+                    <span id="w2" class="weatheritem"><div id="maxtemp"></div><div id="nowtemp"></div><div id="mintemp"></div></span><!-- 온도 최고, 현재, 최소-->
+                    <span id="w3" class="weatheritem"><div id="bigweather"></div><div id="detailweather"></div></span><!-- 대략적날씨, 세부날씨-->
+                </div> 
+                <div id="placeboximg"></div><!--placebox 배경-->
+            </div>
+
+            <!--캘린더-->
+            <div id="calendarbox" class="gridbox container">
+                <div id="dycalendar"></div>
+                <div id="calendarboximg"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--사랑관련 명언-->
+    <div id ="goodtalk" class="gridbox">
+        <div id = 'quotes'> 
+            <span id="talk" class=""></span>    <!--명언-->
+            <span id="talker" class=""></span>  <!--명언한 사람-->
+        </div>
+        <div id="goodtalkimg"></div>        <!--goodtalk배경-->
+    </div>
+
+
+    <footer><a href="https://www.youtube.com/channel/UCpIpFbfMfVUPqiz7glTnHXg">
+        &copy Create by. guitarfish company
+    </a></footer>
+
+
+
+    <script src="Function/BackGround.js"></script>
+    <script src="Function/ToDoList.js"></script>
+    <script src="Function/Clock.js"></script>
+    <script src="Function/Weather.js"></script>
+    <script src="Function/Quotes.js"></script>
+    <script src="Function/DyCalendar.js"></script>
+    <script src="Function/Greeting.js"></script>
+    <script>
+        dycalendar.draw({
+            target: '#dycalendar',
+            type:'month',
+            dayformat:'full',
+            monthformat:'full',
+            highlighttargetdate:true,
+            prevnextbutton:'show'
+        })
+    </script>
+    <script src="Function/music-list.js"></script>      <!--musiclist가 player보다 위에 있어야함. player에서 먼저 생긴 musiclist를 찾아서 가져오기 때문-->   
+    <script src="Function/GuitarfishPlayer.js"></script>
+    <script>
+        if(localStorage.getItem('userid')==null){
+            window.location.href = 'WrongApproach.html';
+        }
+
+    </script>
+
+</body>
+</html>

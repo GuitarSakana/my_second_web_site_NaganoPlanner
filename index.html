@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaganPlanner Login</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>          <!-- 로그인 페이지-->
+    <section>
+        <div class="bg"></div>              <!--background_img-->
+        <div id="target" class="paper"></div>
+
+
+
+        <!-- main 로그인 ui -->
+        <div id="login">            <!--login box-->
+            <h1 id="title">Naganomai Planner</h1>
+            
+            <form id="loginform" action="NaganoPlanner.html">
+                <div id="idps">
+                    <div id="id"><label>I&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspD.<input id="inputid" class="inputst" type="text" name="id" autocomplete="off" required maxlength="15" placeholder="write id"></label></div>
+                    <div id="ps"><label>PASS.<input id="inputpass" class="inputst" type="password" name="passwd" autocomplete="off" required maxlength="20" placeholder="write passwd"></label></div>
+                </div>
+                <div id="submitbox">
+                    <input id="loginbutton" type="submit" value="Login">
+                </div>
+            </form>
+            <div id="find"><div id="fid">find id</div><div id="fpass">find passwd</div></div>
+            <div id="join_out"><div id="join" class="jobutton">join</div><div id="out" class="jobutton">remove</div></div>  
+        </div>
+
+
+        <!-- 회원가입 창 (modal) -->
+        <div id="modal" style="display: none;">
+            <div id='joinbox'style="display:none;">     
+                <input id="joincancel" type="button" value="x">
+                <h1>Naganomai Planner</h1>
+                <h2>join membership</h2>
+                <form id="newjoin">
+                    <div id="joinid"><label>I&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspD&nbsp. &nbsp&nbsp<br><input id="newid" class="joinlog" type="text" name="id" autocomplete="off" maxlength="15" placeholder="id to use."></label></div>
+                    <div id="joinpass"><label>PASS&nbsp.&nbsp&nbsp&nbsp&nbsp<br><input id ='newpass'class="joinlog" type="password" name="passwd" autocomplete="off" maxlength="20" placeholder="passwd to use."></label></div>
+                    <h3>*&nbsp한글포함id는 6글자를 넘길 수 없습니다.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp*&nbspid는 최대15글자까지 가능합니다.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp*&nbsp비밀번호는 20자리까지 가능합니다.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp*&nbsp계정은 하나만 사용 가능합니다.</h3>
+                    <div id="sexcheck"><label>man&nbsp<input type="radio" name="sex" value="Mr." checked="true"></label><label>woman&nbsp<input type="radio" name="sex" value="Ms."></label></div>
+                    <input id="joinbutton" type="submit" value="join">
+                </form>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div><a href="https://www.youtube.com/channel/UCpIpFbfMfVUPqiz7glTnHXg">&nbsp&copy Create by. guitarfish company</a></div>
+        </footer>
+
+    </section>
+
+
+
+    <script src="Function/join_out_login.js"></script>
+    <script src="Function/find_login.js"></script>
+    <script src="Function/pass_login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+*{                              /*css reset코드 일관성있게 맞춘다.*/
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'CustomFont';
+    src: url('font_family/Blacksword.otf') format('opentype');
+}
+@font-face {
+    font-family: 'CustomFont2';
+    src: url('font_family/IndieFlower.ttf') format('truetype');
+}
+@media (max-height: 650px) {
+    /* 화면 크기가 768px 이하일 때 적용되는 스타일 */
+   #login *{font-size: 50%;}
+    #join{width: 60px; height: 35px; margin: 0px; font-size: 15px;}
+    #out{width: 60px; height: 35px; margin: 0px; font-size: 15px;}
+    #submitbox{width: 20%; height: 40%; font-size: 13px;}
+}
+@media(max-width:1120px){
+    #login *{display: none;} 
+}
+@media (max-height: 460px) {
+    /* #login h1{display: none;} */
+    #login form{margin: 0px;}
+}
+section{
+    position: relative;
+    width: 100%; height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg{
+    position: absolute;
+    background-image: url('usepicture/mainBackgroundimg.jpg');
+    width: 100%; height: 100%;
+    background-repeat: no-repeat;
+    background-position: -110px;
+    background-size: cover;
+    filter: brightness(1);
+    z-index: -2;
+}
+.paper{
+    position: absolute;
+    background-image: url('usepicture/paper.png');
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+
+#login{
+    position: absolute;
+    width: 35%; height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    z-index: 3;
+}
+#login::-webkit-scrollbar{
+    display: none;
+}
+#title{
+    margin-top: 10px;
+    margin-right: 20px;
+    font-size: 40px;
+    font-family: 'CustomFont','Blacksword',"휴먼편지체";
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+#loginform{
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+    margin-bottom: 5px;
+}
+#idps{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 15px;
+    /* font-style: italic; */
+}
+#id{
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'CustomFont','Blacksword','휴먼편지체';
+}
+#ps{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'CustomFont','Blacksword','휴먼편지체';
+}
+.inputst{
+    text-align: center;
+    border: none;
+    width: 170px;
+    background: transparent;
+    font-size: 23px;
+    margin-left: 40px;
+    font-family:'휴먼편지체';
+    font-style: italic;
+    /* font-weight: bold; */
+}
+
+.inputst:hover{
+    border-bottom: solid black 3px;
+    box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.6);
+}
+.inputst:focus{
+    outline: none;
+    border-bottom: solid black 3px;
+    box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.6);
+}
+#id:hover, #ps:hover{
+    text-shadow: 2px 2px 4px white;
+    font-size: 31px;
+}
+#submitbox{
+    width: 80px; height: 105px;
+    margin-left: 5px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+#loginbutton{    
+    width: 100%; height: 90%;
+    background: transparent;
+    border: solid black 2px;
+    font-family: 'CustomFont','Blacksword','휴먼편지체';
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+#loginbutton:hover, #loginbutton:focus{
+    font-size: 19px;
+    cursor: pointer;   
+    border: solid black 3px;
+    box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    background-color: rgb(128, 128, 128, 0.3);
+}
+#find{
+    display: flex;
+    width: 100%; height: 7%;
+    justify-content:center;
+    margin-left: 50%;
+    font-family: 'CustomFont','Blacksword','휴먼편지체';
+    font-size: 20px;
+}
+#fid{
+    margin-right: 30px;
+}
+#fid:hover, #fpass:hover{
+    cursor: pointer;
+    font-weight: bold;
+    border-bottom: solid black 2px;
+    font-size: 21px;
+}
+#join_out{
+    width: 100%; height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.jobutton{
+    margin-top: 8%;
+    text-align: center;
+    border: solid black 1px;
+    padding: 0.5%;
+    width: 25%;
+    font-size: 27px;
+    font-family: 'CustomFont','Blacksword','휴먼편지체';
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0,0.6);
+}
+#out{
+    margin-right: 5px;
+}
+.jobutton:hover, .jobutton:focus{
+    cursor: pointer;
+    font-size: 30px;
+    border: solid black 2px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    background-color: rgb(128, 128, 128, 0.3);
+}
+
+
+
+/*회원가입 창*/
+#modal{
+    position: fixed;
+    z-index: 10; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#joinbox{
+    width: 440px;    height: 572px;     /*최상위 태그인 section태그의 속성이 flex이고 가운데 정렬로 설정.*/
+    background-image: url('usepicture/joinimg.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black 3px;
+    box-shadow: 2px 2px 4px black;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+#joincancel{
+    border-radius: 5px;
+    margin-left: 90%;
+    font-size: x-large;
+    padding-bottom: 5px;
+    width: 10%; height: 6%;
+    background-color: rgb(224, 224, 224);
+    cursor: pointer;
+}
+#joincancel:hover{
+    background-color: rgba(150, 150, 152, 0.7);
+} 
+#joinbox h1{
+    font-family: 'CustomFont',"Blacksword",'휴먼편지체';
+    font-size: xx-large;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px white;
+    margin-top: 15px;
+    margin-bottom: 20px;
+} 
+#joinbox h2{
+    font-family: 'CustomFont',"Blacksword",'휴먼편지체';
+    font-weight: bold;
+    text-shadow: 1px 1px 3px white;
+    margin-bottom: 30px;
+    margin-left: 30%;
+}
+#newjoin{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px; padding: 0px;
+}
+#joinid{
+    font-family: 'CustomFont','Blacksword','휴먼편지체';
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: 22%;
+}
+#joinpass{
+    font-family: 'CustomFont','Blacksword','휴먼편지체';
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: 22%;
+}
+#joinid:hover, #joinpass:hover{
+    font-size: 21px;
+    text-shadow: 2px 2px 4px black; 
+} 
+.joinlog{
+    font-family: '휴먼편지체';
+    font-style: italic;
+    font-size: 20px;
+    margin-left: 55%;
+    text-align: center;
+    background: none;
+    border: none;
+    border-bottom: solid black 2px;
+    color: black;
+    outline: none;
+}
+.joinlog:hover, .joinlog:focus{
+    border-bottom: solid black 3px;
+}
+#joinbox h3{
+    font-size: 11px;
+    font-weight: bold;
+    color: black;
+    margin-left: 24%;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+#sexcheck{
+    width: 100%;
+    font-family: 'CustomFont','Blacksword','휴먼편지체';
+    font-size: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+#sexcheck label:first-child:hover, #sexcheck label:last-child:hover{
+    font-size: 32px;
+    text-shadow: 0px 1px 1px black; 
+    cursor: pointer;
+}
+#joinbutton{
+    width: 305px; height: 72px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: 'CustomFont','Blacksword','휴먼편지체';
+    box-shadow: 2px 2px 4px rgb(0, 0, 0,0.5);
+}
+#joinbutton:hover, #joinbutton:focus{
+    background-color: rgb(255, 255, 255,0.5);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* footer */
+#footer{
+    width: 100%; height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    overflow: hidden;
+}
+#footer div{
+    width: 200px; height: 35px;
+    position: absolute;
+    font-family: 'CustomFont','Blacksword','휴먼편지체';
+    font-size: medium;
+    font-style: italic;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+}
+
+
