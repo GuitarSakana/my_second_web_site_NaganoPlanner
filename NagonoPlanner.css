@@ -11,6 +11,13 @@
     font-family: 'CustomFont2';
     src: url('font_family/IndieFlower.ttf') format('truetype');
   }
+@media(min-width:1800px){
+    #main{
+        background-color: rgb(245, 245, 245,0.5);
+        padding-bottom: 20px;
+        border-radius: 20px;
+    }
+}
 .hidden{
     display: none;
 }
@@ -23,6 +30,7 @@ body{
     background-attachment: fixed;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 #main{
     max-width: 1524px; max-height: 720px;
