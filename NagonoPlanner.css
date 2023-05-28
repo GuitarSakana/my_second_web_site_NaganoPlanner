@@ -18,19 +18,28 @@
         border-radius: 20px;
     }
 }
+@media(min-width:1536px){
+    body{
+        display: flex;
+        padding: 0px;
+        margin:0px;
+        background: no-repeat;
+        background-size:cover;
+        background-attachment: fixed;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+}
 .hidden{
     display: none;
 }
 body{
-    display: flex;
     padding: 0px;
     margin:0px;
     background: no-repeat;
     background-size:cover;
     background-attachment: fixed;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 #main{
     max-width: 1524px; max-height: 720px;
