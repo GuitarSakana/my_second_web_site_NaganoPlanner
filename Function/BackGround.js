@@ -1,18 +1,16 @@
-const pickturList = [
-    "mainBackgroundimg.jpg"   
-];
+//배경화면 랜덤으로 가져오기
+// const pickturList = [
+//     "mainBackgroundimg.jpg"   
+// ];
 
-const randomchoice = Math.floor(Math.random()*pickturList.length);
-const bgImage = document.createElement('img');
-bgImage.id = "backgroundimg";
-bgImage.src = "usepicture/"+pickturList[randomchoice];
+// const randomchoice = Math.floor(Math.random()*pickturList.length);
+// const bgImage = document.createElement('img');
+// bgImage.id = "backgroundimg";
+// bgImage.src = "usepicture/"+pickturList[randomchoice];
 
-document.body.style.backgroundImage="url('"+bgImage.src+"')";
+// document.body.style.backgroundImage="url('"+bgImage.src+"')";
 
 
+document.body.style.backgroundImage="url('usepicture/mainBackgroundimg.jpg')";
 
-// 날씨 정보 사이즈가 40px을 넘으면 display:none이 되게 작동
-const detailWeatherElement = document.getElementById('detailweather');
-if (detailWeatherElement.offsetHeight > 40) {
-  detailWeatherElement.classList.add('height-limit');
-}
+
