@@ -174,14 +174,13 @@ a{
     left:129px;
     width: 12px; height: 14px;
     border-radius: 13px;
-    opacity: 0.1;
+    background-color: rgb(249, 110, 110);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     font-size: 2px;
     text-align:left;
 }
 #todo-list div button:hover{
-    background-color: gray;
-    opacity: 0.8;
+    background-color: red;
     cursor: pointer;
 }
 #centerbox{

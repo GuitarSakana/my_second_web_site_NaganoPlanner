@@ -1,4 +1,5 @@
-*{                              /*css reset코드 일관성있게 맞춘다.*/
+/*css reset코드 일관성있게 맞춘다.*/
+*{                              
     margin: 0;padding: 0;
     box-sizing: border-box;
 }
@@ -18,7 +19,11 @@
     #submitbox{width: 20%; height: 40%; font-size: 13px;}
 }
 @media(max-width:1120px){
-    #login *{display: none;} 
+    #login *{display: none;}
+    #notification {display: block;}
+}
+@media (min-width: 1120px) {
+    #notification {display: none;}
 }
 @media (max-height: 460px) {
     /* #login h1{display: none;} */
@@ -346,4 +351,15 @@ a{
     text-decoration: none;
 }
 
+/* 창 사이즈 알림 */
+#notification{
+    position: absolute;
+}
+.notify{
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'CustomFont','Blacksword','휴먼편지체';
+    text-shadow: 2px 2px 2px white;
+}
 
